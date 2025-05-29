@@ -7,8 +7,7 @@ import types
 from copy import deepcopy
 from pathlib import Path
 
-# from ultralytics.nn.modules.c2f_ppa import C2f_PPA
-
+import torch.nn as nn
 import torch
 
 from ultralytics.nn.modules import (
@@ -65,6 +64,7 @@ from ultralytics.nn.modules import (
     TorchVision,
     WorldDetect,
     v10Detect,
+    C2f_PPA
 )
 from ultralytics.utils import DEFAULT_CFG_DICT, DEFAULT_CFG_KEYS, LOGGER, colorstr, emojis, yaml_load
 from ultralytics.utils.checks import check_requirements, check_suffix, check_yaml
@@ -989,6 +989,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             SCDown,
             C2fCIB,
             A2C2f,
+            C2f_PPA
         }
     )
     repeat_modules = frozenset(  # modules with 'repeat' arguments
@@ -1008,6 +1009,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             C2fCIB,
             C2PSA,
             A2C2f,
+            C2f_PPA
         }
     )
     for i, (f, n, m, args) in enumerate(d["backbone"] + d["head"]):  # from, number, module, args
@@ -1198,3 +1200,4 @@ def guess_model_task(model):
         "Explicitly define task for your model, i.e. 'task=detect', 'segment', 'classify','pose' or 'obb'."
     )
     return "detect"  # assume detect
+

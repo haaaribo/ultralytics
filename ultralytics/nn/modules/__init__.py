@@ -17,7 +17,7 @@ Example:
     ```
 """
 
-from .c2f_ppa import C2f_PPA
+
 
 from .block import (
     C1,

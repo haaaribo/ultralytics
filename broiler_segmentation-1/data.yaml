@@ -10,6 +10,6 @@ roboflow:
   url: https://universe.roboflow.com/ysm-njba8/broiler_segmentation/dataset/1
   version: 1
   workspace: ysm-njba8
-test: ../test/images
-train: ../train/images
-val: ../valid/images
+test: /Users/yusangmin/Documents/GitHub/ultralytics2/broiler_segmentation-1/test/images
+train: /Users/yusangmin/Documents/GitHub/ultralytics2/broiler_segmentation-1/train/images
+val: /Users/yusangmin/Documents/GitHub/ultralytics2/broiler_segmentation-1/valid/images
