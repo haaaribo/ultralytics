@@ -17,6 +17,8 @@ Example:
     ```
 """
 
+from .c2f_ppa import C2f_PPA
+
 from .block import (
     C1,
     C2,
@@ -58,6 +60,7 @@ from .block import (
     ResNetLayer,
     SCDown,
     TorchVision,
+    C2f_PPA
 )
 from .conv import (
     CBAM,
@@ -88,6 +91,7 @@ from .transformer import (
     TransformerEncoderLayer,
     TransformerLayer,
 )
+
 
 __all__ = (
     "Conv",
@@ -162,4 +166,5 @@ __all__ = (
     "TorchVision",
     "Index",
     "A2C2f",
+    "C2f_PPA",
 )

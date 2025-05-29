@@ -1,0 +1,15 @@
+names:
+- broiler
+- people
+- pipe
+- rice
+nc: 4
+roboflow:
+  license: CC BY 4.0
+  project: broiler_segmentation
+  url: https://universe.roboflow.com/ysm-njba8/broiler_segmentation/dataset/1
+  version: 1
+  workspace: ysm-njba8
+test: ../test/images
+train: ../train/images
+val: ../valid/images
